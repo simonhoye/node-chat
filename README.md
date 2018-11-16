@@ -20,6 +20,17 @@ And point your browser to `http://localhost:3000`.
 
 ## Deploy on AWS FARGATE
 
+### Deploy cluster
 ```
-$ aws cloudformation deploy --stack-name=production --template-file=cf/public-vpc.yml --capabilities=CAPABILITY_IAM --region=<YOUR_REGION>
+$ aws cloudformation deploy --stack-name=<STACK_NAME> --template-file=cf/cluster.yml --capabilities=CAPABILITY_IAM --region=<YOUR_REGION>
+```
+
+### Deploy resources
+```
+$ aws cloudformation deploy --stack-name=<STACK_NAME> --template-file=cf/resources.yml --capabilities=CAPABILITY_IAM --region=<YOUR_REGION>
+```
+
+### Deploy the chat service
+```
+$
 ```
