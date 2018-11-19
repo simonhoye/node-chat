@@ -8,6 +8,23 @@ A simple chat demo for socket.io
 $ docker build -t node-chat .
 ```
 
+## Push image to container registry
+
+### Login to ECR
+```
+$ `aws ecr get-login --no-include-email --region <YOUR_REGION>`
+```
+
+### Tag image
+```
+$ docker tag node-chat:latest <YOUR_RESPOSITORY>.dkr.ecr.<YOUR_REGION>.amazonaws.com/node-chat:v1
+```
+
+### Push image to repository
+```
+$ docker push <YOUR_REPOSITORY>.dkr.ecr.<YOUR_REGION>.amazonaws.com/node-chat:v1
+```
+
 ## Run environemnt locally
 ```
 docker network create node-chat
@@ -32,5 +49,5 @@ $ aws cloudformation deploy --stack-name=<STACK_NAME> --template-file=cf/resourc
 
 ### Deploy the chat service
 ```
-$
+$ 
 ```
