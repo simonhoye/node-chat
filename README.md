@@ -48,6 +48,4 @@ $ aws cloudformation deploy --stack-name=<STACK_NAME> --template-file=cf/resourc
 ```
 
 ### Deploy the chat service
-```
-$ 
-```
+Use Cloud Formation console
